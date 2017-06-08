@@ -3,7 +3,7 @@ class Proxmark3 < Formula
   homepage "http://www.proxmark.org"
   url "https://github.com/proxmark/proxmark3/archive/v2.3.0.tar.gz"
   sha256 "7571a50af0ab58853f037649de0afab4161022088d459e8b1e5c567e31a8d241"
-  head "https://github.com/marshmellow42/proxmark3.git"
+  head "https://github.com/marshmellow42/proxmark3.git", :branch => "coverity-scan"
 
 
   depends_on "automake" => :build
@@ -19,8 +19,6 @@ class Proxmark3 < Formula
 
   def install
     ENV.deparallelize
-	  
-    git checkout coverity-scan
 	  
 #    system "make", "-C", "client/hid-flasher/"
     system "make", "clean"	  
