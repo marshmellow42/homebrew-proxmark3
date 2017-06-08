@@ -19,7 +19,9 @@ class Proxmark3 < Formula
 
   def install
     ENV.deparallelize
-
+	  
+    git checkout coverity-scan
+	  
 #    system "make", "-C", "client/hid-flasher/"
     system "make", "clean"	  
     system "make", "all"
