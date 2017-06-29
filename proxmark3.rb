@@ -8,6 +8,7 @@ class Proxmark3 < Formula
 
   depends_on "automake" => :build
   depends_on "p7zip" => :build
+  depends_on "readline"
   depends_on "libusb"
   depends_on "libusb-compat"
   depends_on "pkg-config" => :build
